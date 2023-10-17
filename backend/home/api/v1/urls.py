@@ -4,6 +4,7 @@ from rest_framework.routers import DefaultRouter
 from home.api.v1.viewsets import (
     SignupViewSet,
     LoginViewSet,
+    UserListViewSet
 )
 
 router = DefaultRouter()
@@ -12,4 +13,5 @@ router.register("login", LoginViewSet, basename="login")
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("get_users/", UserListViewSet.as_view())
 ]
