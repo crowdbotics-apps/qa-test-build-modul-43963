@@ -293,3 +293,19 @@ if GS_BUCKET_NAME:
     GS_DEFAULT_ACL = "publicRead"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+# FAQ
+FAQ_PREFIX_QUESTION = env.str("FAQ_PREFIX_QUESTION", default="Ques")
+FAQ_PREFIX_ANSWER = env.str("FAQ_PREFIX_ANSWER", default="Ans")
+FAQ_VISUAL_EXPANDED = env.bool("FAQ_VISUAL_EXPANDED", default=False)
+# 2FA
+ACCOUNT_SID = env.str("ACCOUNT_SID", "")
+AUTH_TOKEN = env.str("AUTH_TOKEN", "")
+TOTP_SECRET = env.str("TOTP_SECRET", "3232323232323232")
+OTP_EXPIRATION_TIME = env.str("OTP_EXPIRATION_TIME", 60)
+EMAIL_SUBJECT = env.str("EMAIL_SUBJECT", "Crowdbotics 2FA code")
+
+EMAIL = env.str("TO_EMAILS", "")
+PHONE = env.str("PHONE", "")
+
+# FCM
+FCM_DJANGO_SETTINGS = {"FCM_SERVER_KEY": env.str("FCM_SERVER_KEY", "Your FCM Server Key")}
